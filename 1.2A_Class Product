@@ -1,45 +1,25 @@
-public class Person {
-    private String name;
-    private int age;
-
-    //Default age 18
-    public Person() {
-        this.age = 18;
-    }
+class Product {
+    private int pid;
+    private double price;
+    private int quantity;
 
     // Parameterized constructor
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Product(int pid, double price, int quantity) {
+        this.pid = pid;
+        this.price = price;
+        this.quantity = quantity;
     }
 
-    //Display name and age of person
-    public void displayInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
+    // Getter methods
+    public int getPid() {
+        return pid;
     }
 
-    // Get methods for name and age
-    public String getName() {
-        return name;
-    }
-    // Set methods for name
-    public void setName(String name) {
-        this.name = name;
+    public double getPrice() {
+        return price;
     }
 
-    public int getAge() {
-        return age;
-    }
-    // Set methods for age
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public static void main(String[] args) {
-        // Create a person object using parameterized constructor
-        Person CP = new Person("Hemz", 26);
-        System.out.println("\nPerson:");
-        CP.displayInfo();
+    public int getQuantity() {
+        return quantity;
     }
 }
