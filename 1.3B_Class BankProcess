@@ -1,0 +1,38 @@
+//To get input from the user
+import java.util.Scanner;
+
+public class BankProcess {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Create an account with no initial balance
+        Account account1 = new Account();
+
+        // Create an account with an initial balance of 1000
+        Account account2 = new Account(1000);
+
+        // Deposit and withdraw operations for account1
+        account1.displayBalance();
+        System.out.print("Enter deposit amount for account1: ");
+        double depositAmount1 = scanner.nextDouble();
+        account1.deposit(depositAmount1);
+        account1.displayBalance();
+
+        System.out.print("Enter withdrawal amount for account1: ");
+        double withdrawAmount1 = scanner.nextDouble();
+        account1.withdraw(withdrawAmount1);
+        account1.displayBalance();
+
+        // Deposit and withdraw operations for account2
+        account2.displayBalance();
+        System.out.print("Enter deposit amount for account2: ");
+        double depositAmount2 = scanner.nextDouble();
+        account2.deposit(depositAmount2);
+        account2.displayBalance();
+
+        System.out.print("Enter withdrawal amount for account2: ");
+        double withdrawAmount2 = scanner.nextDouble();
+        account2.withdraw(withdrawAmount2);
+        account2.displayBalance();
+    }
+}
